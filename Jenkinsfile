@@ -16,7 +16,7 @@ pipeline {
     }
 
     environment {
-        DEPLOY_DIR = '/var/jenkins_home/projects/react'
+        DEPLOY_DIR = '/home/ubuntu/docker/projects/react'
     }
 
     stages {
