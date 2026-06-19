@@ -1,0 +1,121 @@
+.tool-workspace.relative-container {
+  position: relative;
+}
+
+.overlay-coming-soon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: var(--radius-md);
+  user-select: none;
+}
+
+body.dark-theme .overlay-coming-soon {
+  background-color: rgba(15, 17, 26, 0.6);
+}
+
+.overlay-badge {
+  background: linear-gradient(135deg, var(--color-purple), var(--color-blue));
+  color: white;
+  padding: 16px 32px;
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(138, 63, 252, 0.35);
+  animation: overlay-float 2.5s ease-in-out infinite;
+}
+
+@keyframes overlay-float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.formatter-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+}
+
+.options-panel {
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: fit-content;
+}
+
+.options-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-heading);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+}
+
+.option-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.option-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.checkbox-item {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.checkbox-item input {
+  cursor: pointer;
+}
+
+.checkbox-item label {
+  cursor: pointer;
+}
+
+.formatter-editors {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.editor-container-half {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-container-half .code-editor-wrapper {
+  height: 200px;
+}
+
+@media (max-width: 900px) {
+  .formatter-layout {
+    grid-template-columns: 1fr;
+  }
+}

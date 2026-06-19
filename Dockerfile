@@ -14,6 +14,8 @@ RUN npm run build
 FROM nginx:alpine
 # 빌드된 Vite 산출물(dist)을 Nginx의 기본 웹 서비스 경로로 복사
 COPY --from=build /app/dist /usr/share/nginx/html
+# SPA 히스토리 라우팅을 위한 Nginx 설정 파일 복사
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # 기본 Nginx 포트 노출
 EXPOSE 80
