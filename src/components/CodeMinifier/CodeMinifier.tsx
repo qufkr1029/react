@@ -71,7 +71,7 @@ export const CodeMinifier: React.FC = () => {
   const handleMinify = () => {
     if (!sourceCode.trim()) return;
 
-    let compressed = '';
+    let compressed: string;
     if (language === 'javascript') {
       compressed = minifyJS(sourceCode);
     } else if (language === 'css') {

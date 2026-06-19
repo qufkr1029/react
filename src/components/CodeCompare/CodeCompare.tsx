@@ -26,7 +26,6 @@ export const CodeCompare: React.FC = () => {
   const [originalText, setOriginalText] = useState<string>('');
   const [modifiedText, setModifiedText] = useState<string>('');
 
-  const [diffResults, setDiffResults] = useState<DiffResult[]>([]);
   const [alignedResults, setAlignedResults] = useState<VisualLine[]>([]);
   const [hasCompared, setHasCompared] = useState<boolean>(false);
 
@@ -145,7 +144,6 @@ export const CodeCompare: React.FC = () => {
       }
     }
 
-    setDiffResults(result);
     setAlignedResults(alignDiffs(result));
     setHasCompared(true);
   };
@@ -153,7 +151,6 @@ export const CodeCompare: React.FC = () => {
   const handleReset = () => {
     setOriginalText('');
     setModifiedText('');
-    setDiffResults([]);
     setAlignedResults([]);
     setHasCompared(false);
   };
