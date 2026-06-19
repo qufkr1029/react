@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building Docker Image for React...'
-                    sh 'docker build -t react-app .'
+                    sh 'docker build -t react .'
                 }
             }
         }
