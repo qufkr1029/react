@@ -3,8 +3,6 @@ services:
     image: react
     container_name: react
     restart: unless-stopped
-    ports:
-      - "80"
     networks:
       - npm_shared_net
 
@@ -12,3 +10,4 @@ networks:
   npm_shared_net:
     name: npm-network
     external: true
+
