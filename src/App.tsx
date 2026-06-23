@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-
 import { Header } from './components/Header/Header';
 import { ToolGrid } from './components/ToolGrid/ToolGrid';
 import { CodeCompare } from './components/CodeCompare/CodeCompare';
+import { MarkdownEditor } from './components/MarkdownEditor/MarkdownEditor';
 import { CodeFormatter } from './components/CodeFormatter/CodeFormatter';
 import { CodeMinifier } from './components/CodeMinifier/CodeMinifier';
 import { EncoderDecoder } from './components/EncoderDecoder/EncoderDecoder';
@@ -54,6 +55,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ToolGrid onSelectTool={handleSelectTool} />} />
           <Route path="/compare" element={<CodeCompare />} />
+          <Route path="/markdown" element={<MarkdownEditor />} />
           <Route path="/formatter" element={<CodeFormatter />} />
           <Route path="/minifier" element={<CodeMinifier />} />
           <Route path="/encoder" element={<EncoderDecoder />} />

@@ -2,6 +2,7 @@ import React from 'react';
 import { ToolCard } from '../ToolCard/ToolCard';
 import {
   CompareIcon,
+  MarkdownIcon,
   FormatterIcon,
   MinifierIcon,
   EncodeIcon,
@@ -22,6 +23,15 @@ export const ToolGrid: React.FC<ToolGridProps> = ({ onSelectTool }) => {
       icon: <CompareIcon size={28} className="tool-icon-svg text-purple" />,
       tag: 'Diff Tool',
       color: 'purple',
+      isReady: true
+    },
+    {
+      id: 'markdown',
+      title: '마크다운 실시간 번역 (Markdown Live)',
+      description: '왼쪽 영역에 마크다운 문법으로 작성하면 오른쪽 영역에 번역된 렌더링 결과를 실시간으로 확인합니다.',
+      icon: <MarkdownIcon size={28} className="tool-icon-svg text-blue" />,
+      tag: 'Markdown Parser',
+      color: 'blue',
       isReady: true
     },
     {
